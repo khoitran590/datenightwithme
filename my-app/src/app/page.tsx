@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const TAPS_TO_OPEN = 20;
@@ -108,8 +109,22 @@ export default function Home() {
               ].join(" ")}
             >
               {!opened ? null : answer === "yes" ? (
-                <div className="rounded-2xl border border-pink-200/80 bg-gradient-to-br from-pink-50 via-pink-100 to-rose-50 p-5 text-center text-base font-semibold text-pink-900 shadow-sm">
-                  YAYYYYYY I'm excited to take my princess out on a date nightttttttt!!!!
+                <div className="space-y-5">
+                  <div className="rounded-2xl border border-pink-200/80 bg-gradient-to-br from-pink-50 via-pink-100 to-rose-50 p-5 text-center text-base font-semibold text-pink-900 shadow-sm">
+                    YAYYYYYY I'm excited to take my princess out on a date nightttttttt!!!!
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="overflow-hidden rounded-2xl border border-pink-200/80 bg-pink-50/60 p-2 shadow-sm">
+                      <Image
+                        src="/200w.gif"
+                        alt="Happy dancing panda"
+                        width={160}
+                        height={160}
+                        className="rounded-xl"
+                        unoptimized
+                      />
+                    </div>
+                  </div>
                 </div>
               ) : answer === null ? (
                 <div className="space-y-5">
@@ -139,8 +154,22 @@ export default function Home() {
                   </div>
                 </div>
               ) : (
-                <div className="rounded-2xl border border-pink-200/80 bg-gradient-to-br from-pink-50 via-pink-100 to-rose-50 p-5 text-sm text-zinc-800 shadow-sm">
-                  No, I will not stay home tonight and go with my boyfriend instead!!!
+                <div className="space-y-5">
+                  <div className="rounded-2xl border border-pink-200/80 bg-gradient-to-br from-pink-50 via-pink-100 to-rose-50 p-5 text-sm text-zinc-800 shadow-sm">
+                    No, I will not stay home tonight and go with my boyfriend instead!!!
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="overflow-hidden rounded-2xl border border-pink-200/80 bg-pink-50/60 p-2 shadow-sm">
+                      <Image
+                        src="/alpaca.gif"
+                        alt="Silly dancing alpaca"
+                        width={180}
+                        height={180}
+                        className="rounded-xl"
+                        unoptimized
+                      />
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
